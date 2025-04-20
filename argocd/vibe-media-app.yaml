@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vibe-media
+  namespace: vibe-media-cd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jameshyphen/vibe-media-deploy
+    targetRevision: HEAD
+    path: apps/vibe-media
+    kustomize: {}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
