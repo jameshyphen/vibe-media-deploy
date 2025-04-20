@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: jameshyphen/vibe-media:0.1.0
+          image: jameshyphen/vibe-media:0.2.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
