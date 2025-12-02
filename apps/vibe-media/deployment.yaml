@@ -6,6 +6,7 @@ metadata:
     app: vibe-media
 spec:
   replicas: 1
+  revisionHistoryLimit: 2  # Keep only the last 2 revisions
   selector:
     matchLabels:
       app: vibe-media
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: dzhemaptula/vibe-media:0.7.0
+          image: dzhemaptula/vibe-media:0.8.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000

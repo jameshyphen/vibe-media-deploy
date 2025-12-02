@@ -46,7 +46,7 @@ Follow these steps to set up and deploy the Vibe Media app locally using Kuberne
     get secret argocd-initial-admin-secret \
     -o jsonpath='{.data.password}' | base64 -d)"
     ```
-    Now you can visit localhost:800 and your ArgoCD app will be visible.
+    Now you can visit localhost:80 and your ArgoCD app will be visible.
     Log in with the following:
     - **Username**: admin
     - **Password**: take from step 5
@@ -54,7 +54,7 @@ Follow these steps to set up and deploy the Vibe Media app locally using Kuberne
 6. **Creating the Vibe-Media App**
     Log into argo via CLI
     ```bash
-    argocd login localhost:8080 --username admin --password $ARGOCD_ADMIN_ASSWORD
+    argocd login localhost:8080 --username admin --password $ARGOCD_ADMIN_PASSWORD
     ```
     Create Argo APP for vibe-media
     ```bash
