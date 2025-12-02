@@ -16,10 +16,17 @@ spec:
     spec:
       containers:
         - name: web
-          image: jameshyphen/vibe-media:0.3.0
+          image: jameshyphen/vibe-media:0.6.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
           env:
             - name: DJANGO_SETTINGS_MODULE
               value: social_media.settings
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
