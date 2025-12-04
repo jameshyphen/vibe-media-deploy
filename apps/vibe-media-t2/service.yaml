@@ -7,6 +7,6 @@ spec:
     app: vibe-media-t2
   ports:
     - port: 80        # cluster‑internal port
-      targetPort: 8000
+      targetPort: 8001
       protocol: TCP
   type: ClusterIP

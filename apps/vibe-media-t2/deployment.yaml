@@ -20,7 +20,7 @@ spec:
           image: dzhemaptula/vibe-media:0.11.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8002
+            - containerPort: 8001
           env:
             - name: DJANGO_SETTINGS_MODULE
               value: social_media.settings
