@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vibe-media
+spec:
+  selector:
+    app: vibe-media-t2
+  ports:
+    - port: 80        # cluster‑internal port
+      targetPort: 8000
+      protocol: TCP
+  type: ClusterIP

@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: vibe-media
+                name: vibe-media-t1
                 port:
-                  number: 80
+                  number: 8091

@@ -4,7 +4,7 @@ metadata:
   name: vibe-media
 spec:
   selector:
-    app: vibe-media
+    app: vibe-media-t1
   ports:
     - port: 80        # cluster‑internal port
       targetPort: 8000
