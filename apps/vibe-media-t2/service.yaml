@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vibe-media
+  name: vibe-media-t2
 spec:
   selector:
     app: vibe-media-t2

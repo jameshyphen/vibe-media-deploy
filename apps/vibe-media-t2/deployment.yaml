@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vibe-media
+  name: vibe-media-t2
   labels:
-    app: vibe-media
+    app: vibe-media-t2
 spec:
   replicas: 1
   revisionHistoryLimit: 2  # Keep only the last 2 revisions
   selector:
     matchLabels:
-      app: vibe-media
+      app: vibe-media-t2
   template:
     metadata:
       labels:
-        app: vibe-media
+        app: vibe-media-t2
     spec:
       containers:
         - name: web
-          image: dzhemaptula/vibe-media:0.8.0
+          image: dzhemaptula/vibe-media:0.11.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8000
+            - containerPort: 8002
           env:
             - name: DJANGO_SETTINGS_MODULE
               value: social_media.settings
